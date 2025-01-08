@@ -1,5 +1,6 @@
 import React,{useRef} from 'react';
 import Card from './Card';
+// import AddCom from './AddCom';
 
 function ForgroundCom() {
 
@@ -24,6 +25,16 @@ function ForgroundCom() {
       close: true,
       tag: {isOpen: true, tagTitle: "Update Now" , tagColor: "green"}  
     },
+    {
+      desc : " This is a first card of this page please run program.",
+      filesize: ".9mb",
+      close: true,
+      tag: {isOpen: true, tagTitle: "Download Now", tagColor: "blue"}  
+    },
+    {
+      Add : true ,
+    },
+    
   ];
   return (
       <div ref={ref} className='fixed top-0 left-0 z-[3] w-full h-full p-10 flex gap-10 flex-wrap'>

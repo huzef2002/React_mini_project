@@ -3,11 +3,14 @@ import { FaRegFileAlt } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion"
+import AddCom from './AddCom';
 
 function Card({data,reference}) {
   return (
 
-      <motion.div drag dragConstraints={reference} whileDrag={{scale: 1.2}}  className='relative flex-shrink-0 rounded-[45px] h-72 w-60 bg-zinc-900/90 text-white py-10 px-8 overflow-hidden'>
+      <motion.div drag dragConstraints={reference} whileDrag={{scale: 1.2}} className='relative flex-shrink-0 rounded-[45px] h-72 w-60 bg-zinc-900/90 mt-10 text-white py-10 px-8 overflow-hidden'>
+        {data.Add ? (<AddCom/>) : 
+        <div>
         <FaRegFileAlt />
         {/* paragraph */}
         <p className='text-sm leading-tight mt-5 font-semibold'>{data.desc} </p>
@@ -25,8 +28,10 @@ function Card({data,reference}) {
                 <h3 className='text-center font-semibold text-sm'>{data.tag.tagTitle}</h3>
               </div>
             ):null}
-            
+
         </div>
+        </div>
+        }
       </motion.div>
     
   );
